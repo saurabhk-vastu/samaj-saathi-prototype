@@ -64,8 +64,8 @@ export default function MePage() {
   return (
     <div className="relative flex flex-col h-full min-h-0 bg-[var(--ss-bg)]">
       <div className="flex-1 overflow-y-auto hide-scrollbar px-4 pt-4 safe-top pb-4">
-        <div className="flex gap-3.5 items-start">
-          <div className="h-[72px] w-[72px] rounded-full overflow-hidden bg-[var(--ss-primary-soft)] border border-[var(--ss-line)] shrink-0 flex items-center justify-center text-[28px] font-semibold text-[var(--ss-primary)]">
+        <div className="flex gap-4 items-center">
+          <div className="h-[96px] w-[96px] rounded-full overflow-hidden bg-[var(--ss-primary-soft)] border border-[var(--ss-line)] shrink-0 flex items-center justify-center text-[32px] font-semibold text-[var(--ss-primary)] shadow-sm">
             {photo ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={photo} alt="" className="h-full w-full object-cover object-top" />
@@ -73,9 +73,9 @@ export default function MePage() {
               (profile.name || "S").slice(0, 1).toUpperCase()
             )}
           </div>
-          <div className="flex-1 min-w-0 pt-0.5">
+          <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5">
-              <p className="text-[16px] font-bold uppercase tracking-[0.02em] text-[var(--ss-ink)] truncate">
+              <p className="text-[17px] font-bold uppercase tracking-[0.02em] text-[var(--ss-ink)] truncate leading-tight">
                 {profile.name || "Your name"}
               </p>
               {profile.idVerified ? (
@@ -84,12 +84,12 @@ export default function MePage() {
                 </span>
               ) : null}
             </div>
-            <p className="text-[13px] text-[var(--ss-ink)] mt-0.5">{profile.mobile || "—"}</p>
+            <p className="text-[13px] text-[var(--ss-ink)] mt-1 leading-snug">{profile.mobile || "—"}</p>
             {detailLine ? (
-              <p className="text-[12px] text-[var(--ss-muted)] mt-1">{detailLine}</p>
+              <p className="text-[12px] text-[var(--ss-muted)] mt-1 leading-snug">{detailLine}</p>
             ) : null}
             {profile.city ? (
-              <p className="text-[12px] text-[var(--ss-muted)]">{profile.city}</p>
+              <p className="text-[12px] text-[var(--ss-muted)] mt-0.5 leading-snug">{profile.city}</p>
             ) : null}
           </div>
         </div>
