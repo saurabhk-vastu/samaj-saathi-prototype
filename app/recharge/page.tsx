@@ -23,7 +23,8 @@ export default function RechargePage() {
       footer={
         <PrimaryButton
           onClick={() => {
-            patch({ isPremium: true, hasRecharged: true });
+            // Prototype only: no real payment. Keep home recharge banner visible.
+            patch({ isPremium: true });
             router.push("/home");
           }}
         >

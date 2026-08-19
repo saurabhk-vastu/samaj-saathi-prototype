@@ -79,7 +79,6 @@ function RechargeBanner() {
 export default function HomePage() {
   const { profile, patch } = useProfile();
   const [tab, setTab] = useState<"all" | "shortlisted">("all");
-  const needsRecharge = !profile.hasRecharged;
   const list = useMemo(() => {
     if (tab === "shortlisted") {
       return MATCHES.filter((m) => profile.likedIds.includes(m.id));
@@ -124,17 +123,15 @@ export default function HomePage() {
           </Link>
         </div>
 
-        {needsRecharge ? (
-          <div className="mt-2.5">
-            <RechargeBanner />
-          </div>
-        ) : null}
+        <div className="mt-2.5">
+          <RechargeBanner />
+        </div>
 
         <p className="mt-2.5 text-[15px] font-semibold text-[var(--ss-ink)]">Your matches</p>
       </header>
 
       <div className="flex-1 overflow-y-auto hide-scrollbar px-4 pb-3 space-y-3">
-        {tab === "all" && !needsRecharge ? (
+        {tab === "all" ? (
           <VerificationBanner
             verified={profile.idVerified}
             onVerify={() => patch({ idVerified: true })}

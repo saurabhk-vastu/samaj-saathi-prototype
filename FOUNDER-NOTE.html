@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samaj Saathi prototype note</title>
+  <style>
+    @page { size: A4; margin: 18mm; }
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      color: #1f1a17;
+      line-height: 1.45;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 20px 40px;
+      background: #fff;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 6px;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 14px;
+      margin: 18px 0 6px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #6d322c;
+    }
+    p, li { font-size: 13.5px; margin: 0 0 8px; }
+    ul { margin: 0 0 8px; padding-left: 18px; }
+    a { color: #6d322c; }
+    .meta { color: #5c534b; font-size: 12.5px; margin-bottom: 16px; }
+    .box {
+      border: 1px solid #ddd2c6;
+      background: #faf7f2;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin: 10px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Samaj Saathi prototype note for the founder</h1>
+  <p class="meta">One-page briefing for a clickable mobile prototype review.</p>
+
+  <h2>What changed, and what did not</h2>
+  <p>
+    I focused almost entirely on UI and UX. The product flow, screen purpose, and core features stay the same as the live app. Users still create a biodata, set preferences, browse matches, like profiles, open chats, manage their profile, and see recharge and help screens.
+  </p>
+  <p>
+    I did not invent a new product. I did not remove major features or redesign the journey from scratch. Where something looks different, it is usually clearer layout, calmer visuals, better spacing, and more consistent interaction patterns.
+  </p>
+
+  <h2>Why this prototype exists</h2>
+  <p>
+    The current product works, but the experience can feel crowded and hard to scan. This prototype shows how the same features can feel clearer and more trustworthy, while keeping language and steps familiar for Indian family users.
+  </p>
+
+  <h2>What you can try</h2>
+  <ul>
+    <li>Language selection, mobile OTP (any valid Indian number, OTP is <strong>1234</strong>)</li>
+    <li>Full biodata onboarding and match preferences</li>
+    <li>Home with matches across major states, shortlist, and filters</li>
+    <li>Profile view with call, WhatsApp, message, report, and help</li>
+    <li>Likes, messages, and account settings (privacy, subscriptions, language, logout)</li>
+    <li>Recharge opens the ₹1 trial screen. There is no real payment in this prototype, so the home recharge banner stays visible on purpose.</li>
+  </ul>
+
+  <h2>Demo link</h2>
+  <div class="box">
+    <p><a href="https://samaj-saathi-prototype.vercel.app">https://samaj-saathi-prototype.vercel.app</a></p>
+  </div>
+
+  <h2>How to read this demo</h2>
+  <p>
+    Please judge the clarity of each screen, the ease of moving through the flow, and whether the app still feels like Samaj Saathi. Feature gaps versus the live app are intentional only where a real backend, SMS, or payment would be needed.
+  </p>
+  <p>
+    If something feels off against the live product, call it out. The goal is a better looking and easier to use version of the same product, not a different one.
+  </p>
+</body>
+</html>
