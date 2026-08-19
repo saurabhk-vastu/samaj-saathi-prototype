@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import {
   ChevronRight,
+  Crown,
   FileText,
   IndianRupee,
   LogOut,
@@ -150,6 +151,28 @@ export default function MePage() {
             <ChevronRight size={16} className="text-[var(--ss-muted)]" />
           </button>
         </div>
+
+        <Link
+          href="/recharge"
+          className="mt-4 block rounded-[16px] px-4 pt-3.5 pb-3"
+          style={{
+            background: "linear-gradient(180deg, #f7e08c 0%, #f0c45a 55%, #e8b045 100%)",
+          }}
+        >
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="text-[15px] font-bold text-[var(--ss-ink)]">Premium member</p>
+              <p className="text-[13px] font-medium text-[#9a4a28] mt-0.5">Contact balance: 0</p>
+            </div>
+            <Crown size={28} className="text-[var(--ss-primary)] shrink-0 mt-0.5" strokeWidth={1.75} />
+          </div>
+          <span className="mt-3 flex h-11 w-full items-center justify-center rounded-[12px] bg-[var(--ss-primary)] text-[15px] font-semibold text-white shadow-btn">
+            Recharge now
+          </span>
+          <p className="mt-2 text-center text-[12px] font-medium text-[var(--ss-ink)]">
+            Valid till Sep 19, 2026
+          </p>
+        </Link>
       </div>
       <BottomNav />
 
