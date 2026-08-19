@@ -20,7 +20,6 @@ The aim was not a new product. It was a more polished version of the same journe
 
 https://samaj-saathi-prototype.vercel.app
 
-GitHub: https://github.com/saurabhk-vastu/samaj-saathi-prototype
 
 ## How to use the app
 
