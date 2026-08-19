@@ -289,7 +289,7 @@ function OtherCaste({ step, back }: { step: number; back: string }) {
 }
 
 function MotherTongue({ step, back }: { step: number; back: string }) {
-  const { profile, patch, patchPrefs } = useProfile();
+  const { profile, patch } = useProfile();
   const router = useRouter();
   const [q, setQ] = useState("");
   const list = MOTHER_TONGUES.filter((t) => t.toLowerCase().includes(q.toLowerCase()));
@@ -303,7 +303,6 @@ function MotherTongue({ step, back }: { step: number; back: string }) {
             selected={profile.motherTongue === t}
             onClick={() => {
               patch({ motherTongue: t });
-              patchPrefs({ motherTongue: t });
               goNext(router, "mother-tongue");
             }}
           >
@@ -441,7 +440,7 @@ function Height({ step, back }: { step: number; back: string }) {
 }
 
 function Diet({ step, back }: { step: number; back: string }) {
-  const { profile, patch, patchPrefs } = useProfile();
+  const { profile, patch } = useProfile();
   const router = useRouter();
   const icons: Record<string, ReactNode> = {
     Vegetarian: <Leaf size={20} />,
@@ -459,7 +458,6 @@ function Diet({ step, back }: { step: number; back: string }) {
             selected={profile.diet === d}
             onClick={() => {
               patch({ diet: d });
-              patchPrefs({ diet: d });
               goNext(router, "diet");
             }}
           />
@@ -470,7 +468,7 @@ function Diet({ step, back }: { step: number; back: string }) {
 }
 
 function Marital({ step, back }: { step: number; back: string }) {
-  const { profile, patch, patchPrefs } = useProfile();
+  const { profile, patch } = useProfile();
   const router = useRouter();
   const icons: Record<string, ReactNode> = {
     Unmarried: <Heart size={20} />,
@@ -488,7 +486,6 @@ function Marital({ step, back }: { step: number; back: string }) {
             selected={profile.maritalStatus === d}
             onClick={() => {
               patch({ maritalStatus: d });
-              patchPrefs({ maritalStatus: d });
               goNext(router, "marital");
             }}
           />

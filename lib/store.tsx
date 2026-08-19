@@ -55,22 +55,22 @@ export const defaultState: ProfileState = {
   idVerified: false,
   locationPrivacy: "all-india",
   matchPreferences: {
-    ageMin: 24,
-    ageMax: 32,
+    ageMin: 21,
+    ageMax: 35,
     openToOtherCaste: "",
     city: "",
     states: [],
-    maritalStatus: "Unmarried",
-    motherTongue: "",
+    maritalStatus: "All Ok",
+    motherTongue: "All Ok",
     motherTongues: [],
     monthlySalary: "All Ok",
     occupation: "All Ok",
-    education: "",
+    education: "All Ok",
     educations: [],
     heightMin: "5'4\"",
     heightMax: "6'0\"",
     heightAllOk: true,
-    diet: "Vegetarian",
+    diet: "All Ok",
     mangalDosh: "All Ok",
   },
   likedIds: [],
@@ -121,15 +121,25 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
                   ].filter(Boolean)
                 : defaultState.matchPreferences.states,
             motherTongues: Array.isArray(parsed.matchPreferences?.motherTongues)
-              ? parsed.matchPreferences.motherTongues
-              : parsed.matchPreferences?.motherTongue
-                ? [parsed.matchPreferences.motherTongue]
-                : defaultState.matchPreferences.motherTongues,
+              ? parsed.matchPreferences.motherTongues.filter((t) => t && t !== "All Ok")
+              : [],
+            motherTongue: "All Ok",
+            diet:
+              parsed.matchPreferences?.diet &&
+              parsed.matchPreferences.diet !== "Vegetarian"
+                ? parsed.matchPreferences.diet
+                : "All Ok",
+            maritalStatus:
+              parsed.matchPreferences?.maritalStatus &&
+              parsed.matchPreferences.maritalStatus !== "Unmarried"
+                ? parsed.matchPreferences.maritalStatus
+                : "All Ok",
+            ageMin: Math.min(parsed.matchPreferences?.ageMin ?? 21, 21),
+            ageMax: Math.max(parsed.matchPreferences?.ageMax ?? 35, 32),
             educations: Array.isArray(parsed.matchPreferences?.educations)
               ? parsed.matchPreferences.educations
-              : parsed.matchPreferences?.education
-                ? [parsed.matchPreferences.education]
-                : defaultState.matchPreferences.educations,
+              : [],
+            education: "All Ok",
             heightAllOk:
               typeof parsed.matchPreferences?.heightAllOk === "boolean"
                 ? parsed.matchPreferences.heightAllOk

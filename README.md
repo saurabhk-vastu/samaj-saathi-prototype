@@ -4,34 +4,26 @@ Clickable Android-style matrimonial prototype for founder review.
 
 This is a **mobile app experience** hosted on the web only so it can be shared with one URL. On desktop it stays inside a phone frame.
 
-## Live demo (share this link)
-
-**https://samaj-saathi-prototype.vercel.app**
-
-Anyone can open this URL and use the full prototype — no install needed.
-
-## Demo credentials
+## Demo
 
 - Any valid Indian mobile number
 - OTP: **1234**
 - Premium START TRIAL: no real payment
 - All data stays in the browser (`localStorage`)
 
-## Project location
-
-```text
-/Users/apple/Documents/samaj-saathi-prototype
-```
-
 ## Run locally
 
 ```bash
-cd /Users/apple/Documents/samaj-saathi-prototype
+cd samaj-saathi-prototype
 npm install
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+## Deploy (Vercel)
+
+Import this folder as a Next.js project. No env vars, backend, or API keys.
 
 ## Product intent
 

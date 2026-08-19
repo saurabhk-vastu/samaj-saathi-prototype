@@ -112,27 +112,28 @@ export const CITIES = [
   "Vijayawada, Andhra Pradesh",
 ];
 
+/** Major states first — same order users see while picking match preferences */
 export const STATES = [
-  "Andhra Pradesh",
-  "Assam",
-  "Bihar",
-  "Chandigarh",
-  "Delhi",
-  "Gujarat",
-  "Haryana",
-  "Jharkhand",
-  "Karnataka",
-  "Kerala",
-  "Madhya Pradesh",
+  "Uttar Pradesh",
   "Maharashtra",
-  "Odisha",
-  "Punjab",
+  "Delhi",
+  "Haryana",
   "Rajasthan",
+  "Gujarat",
+  "Karnataka",
   "Tamil Nadu",
   "Telangana",
-  "Uttar Pradesh",
-  "Uttarakhand",
+  "Andhra Pradesh",
   "West Bengal",
+  "Punjab",
+  "Madhya Pradesh",
+  "Bihar",
+  "Kerala",
+  "Odisha",
+  "Assam",
+  "Jharkhand",
+  "Uttarakhand",
+  "Chandigarh",
 ];
 
 export const HEIGHTS = [

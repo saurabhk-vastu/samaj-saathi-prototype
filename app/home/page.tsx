@@ -23,9 +23,9 @@ function matchesPrefs(match: (typeof MATCHES)[number], prefs: MatchPreferences) 
     return false;
   }
   if (
-    prefs.motherTongue &&
-    prefs.motherTongue !== "All Ok" &&
-    match.motherTongue !== prefs.motherTongue
+    prefs.motherTongues?.length &&
+    !prefs.motherTongues.includes("All Ok") &&
+    !prefs.motherTongues.includes(match.motherTongue)
   ) {
     return false;
   }

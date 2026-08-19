@@ -22,11 +22,9 @@ export function MatchPreferencesForm() {
   const selectedStates = p.states || [];
   const [stateQuery, setStateQuery] = useState("");
 
-  const filteredStates = (
-    stateQuery
-      ? STATES.filter((s) => s.toLowerCase().includes(stateQuery.toLowerCase()))
-      : STATES
-  ).slice(0, 12);
+  const filteredStates = stateQuery
+    ? STATES.filter((s) => s.toLowerCase().includes(stateQuery.toLowerCase()))
+    : STATES;
 
   function toggleState(state: string) {
     const next = selectedStates.includes(state)

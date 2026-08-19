@@ -107,7 +107,7 @@ export default function EditSectionPage() {
 
   const stateList = useMemo(() => {
     const q = stateQuery.trim().toLowerCase();
-    return (q ? STATES.filter((s) => s.toLowerCase().includes(q)) : STATES).slice(0, 12);
+    return q ? STATES.filter((s) => s.toLowerCase().includes(q)) : STATES;
   }, [stateQuery]);
 
   const p = profile.matchPreferences;
